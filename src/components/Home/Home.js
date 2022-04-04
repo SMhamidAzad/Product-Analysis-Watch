@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Row } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import DisplayReview from '../DisplayReview/DisplayReview';
 
 const Home = () => {
@@ -27,11 +27,11 @@ const Home = () => {
             </div>
             <div>
                 <h1 className='text-center mt-5'>Customer Reviews(3)</h1>
-                <Row xs={1} md={3} className="">
+                <div className='row row-cols-md-3'>
                     {
                         reviews.map(review => <DisplayReview key={review._id} review={review}></DisplayReview>)
                     }
-                </Row>
+                </div>
                 <Button className='d-flex justify-items-center'>See all reviews</Button>
             </div>
         </div>

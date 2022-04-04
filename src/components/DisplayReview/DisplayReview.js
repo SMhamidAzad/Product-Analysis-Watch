@@ -1,23 +1,19 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
 
 const DisplayReview = ({ review}) => {
     const { name, picture, rating, comment } = review;
     
     return (
         
-        <Col>
-            <Card>
-                <Card.Img style={{borderRadius: '50%', width: '50px'}} variant="top" src={picture} />
+            <div className='col'>
+                <div>
+                <img src={picture} alt="" />
                 <h3>{name}</h3>
-                <h4>Rating: {rating}</h4>
-                <Card.Body>
-                    <Card.Text>
-                        {comment}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </Col>
+                <p>{comment}</p>
+                <h5 className=' text-warning'>Rating: {rating}</h5>
+                </div>
+            </div>
+
     );
 };
 
