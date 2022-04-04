@@ -17,19 +17,15 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-md-4 mt-5">
-
                     <img className='img-fluid' src="https://m.media-amazon.com/images/I/71Ki0yBKVJL._AC_SX615_SY462_.jpg" alt="" />
-
                 </div>
                 <div className='mt-5'>
-                    <h1 style={{ color: '#040924'}} className='text-center my-5 fw-bolder'>Customer Reviews(3)</h1>
-
+                    <h1 style={{ color: '#040924' }} className='text-center my-5 fw-bolder'>Customer Reviews(3)</h1>
                     <div className='row row-cols-md-3 gap-5 d-flex justify-content-center'>
                         {
                             reviews.slice(0, 3).map(review => <DisplayReview key={review._id} review={review}></DisplayReview>)
                         }
                     </div>
-
                 </div>
                 <div className='d-flex justify-content-center my-4'>
                     <Link style={{ backgroundColor: 'rgb(255,26,26)', color: 'white' }} to="/reviews" className='btn py-2 px-3 fw-bold rounded-3'>See all reviews</Link>
