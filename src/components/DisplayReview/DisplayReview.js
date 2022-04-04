@@ -7,7 +7,7 @@ const DisplayReview = ({ review}) => {
         
             <div className='col'>
                 <div>
-                <img src={picture} alt="" />
+                <img className='d-flex justify-content-center' src={picture} alt="" />
                 <h3>{name}</h3>
                 <p>{comment}</p>
                 <h5 className=' text-warning'>Rating: {rating}</h5>

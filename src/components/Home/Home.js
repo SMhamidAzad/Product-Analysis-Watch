@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom';
 import useReviews from '../../hooks/useReviews';
 import DisplayReview from '../DisplayReview/DisplayReview';
+import './Home.css'
 
 const Home = () => {
     const [reviews,setReviews] = useReviews()
     return (
         <div className="container">
             <div className='row my-4'>
-            <div className="col-md-8 d-flex align-items-center">
+            <div className="col-md-8 d-flex align-items-center mt-5">
                 <div>
-                <h1>Your next watch</h1>
-                <h1>Your best watch</h1>
+                <h1 style={{color: '#F3142F'}} className="heading">Your next watch</h1>
+                <h1 className='heading mb-4'>Your best watch</h1>
                 <p>The Automatic Mechanical Watch Does Not Need To Be Loaded With The Battery. When Using It For The First Time, Please Push The Crown Back To Normal Working Condition. You Can Rotate The Crown By Rotating The Crown Clockwise 30 Times In The Normal Operating Position. The Initial Winding Is Completed, Because The Automatic Mechanical Watch Must Be Automatically Wound By The Swing Of The Arm, So It Must Be Worn For More Than Eight Hours Every Day To Ensure Accurate Time</p>
                 <button className='bg-primary border-0 text-white px-4 py-3 rounded fw-bold '>Live Demo</button>
                 </div>
