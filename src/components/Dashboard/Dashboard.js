@@ -1,5 +1,6 @@
 import React from 'react';
 import { Area, Bar, BarChart, CartesianGrid, ComposedChart, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import './Dashboard.css'
 
 const Dashboard = () => {
     const data =
@@ -43,8 +44,8 @@ const Dashboard = () => {
         ]
     return (
         <div className='d-flex justify-content-center mt-4'>
-             <div className=''>
-            <BarChart width={1000} height={500} data={data}>
+             <div>
+            <BarChart className='mobile-width' width={1000} height={500} data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="month" />
                 <YAxis />

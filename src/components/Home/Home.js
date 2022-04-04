@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div className="container">
             <div className='row my-4'>
-                <div className="col-md-8 d-flex align-items-center mt-5">
+                <div className="col-md-8 d-flex align-items-center mt-5 ">
                     <div>
                         <h1 style={{ color: '#E74216' }} className="heading">Your next watch</h1>
                         <h1 style={{ color: '#040924' }} className='heading mb-4'>Your best watch</h1>
@@ -21,7 +21,7 @@ const Home = () => {
                 </div>
                 <div className='mt-5'>
                     <h1 style={{ color: '#040924' }} className='text-center my-5 fw-bolder'>Customer Reviews(3)</h1>
-                    <div className='row row-cols-md-3 gap-5 d-flex justify-content-center'>
+                    <div className='row row-cols-3 gap-5 d-flex justify-content-center'>
                         {
                             reviews.slice(0, 3).map(review => <DisplayReview key={review._id} review={review}></DisplayReview>)
                         }
