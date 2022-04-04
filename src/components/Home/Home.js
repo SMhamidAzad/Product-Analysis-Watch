@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import useReviews from '../../hooks/useReviews';
 import DisplayReview from '../DisplayReview/DisplayReview';
 
 const Home = () => {
-    const [reviews,setReviews] = useState([]);
-    useEffect(()=>{
-        fetch('reviews.json')
-        .then(res => res.json())
-        .then(data => setReviews(data.slice(0,3)))
-    },[]);
+    const [reviews,setReviews] = useReviews()
     return (
         <div className="container">
             <div className='row my-4'>
@@ -29,10 +24,10 @@ const Home = () => {
                 <h1 className='text-center mt-5'>Customer Reviews(3)</h1>
                 <div className='row row-cols-md-3'>
                     {
-                        reviews.map(review => <DisplayReview key={review._id} review={review}></DisplayReview>)
+                        reviews.slice(0,3).map(review => <DisplayReview key={review._id} review={review}></DisplayReview>)
                     }
                 </div>
-                <Button className='d-flex justify-items-center'>See all reviews</Button>
+                <Link to="/reviews" className=''>See all reviews</Link>
             </div>
         </div>
         </div>

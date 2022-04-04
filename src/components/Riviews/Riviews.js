@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import useReviews from '../../hooks/useReviews';
 import Riview from '../Rivew/Riview';
 
 const Riviews = () => {
-    const [reviews,setReviews] = useState([]);
-    useEffect(()=>{
-        fetch('reviews.json')
-        .then(res => res.json())
-        .then(data => setReviews(data));
-    },[]);
+    // const [reviews,setReviews] = useState([]);
+    // useEffect(()=>{
+    //     fetch('reviews.json')
+    //     .then(res => res.json())
+    //     .then(data => setReviews(data));
+    // },[]);
+    const [reviews, setReviews] = useReviews();
     return (
         <div className='container'>
             {

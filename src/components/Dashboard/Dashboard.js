@@ -43,29 +43,28 @@ const Dashboard = () => {
         ]
     return (
         <div className='container'>
-            <h1>This is dashboard part compo</h1>
             <BarChart width={1000} height={500} data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="month" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="investment" fill="#8884d8" />
-                <Bar dataKey="revenue" fill="#82ca9d" />
-                <Bar dataKey="sell" fill="red" />
+                <Bar dataKey="investment" fill="#7EB74F" />
+                <Bar dataKey="revenue" fill="#90D4D3" />
+                <Bar dataKey="sell" fill="#E98182" />
             </BarChart>
-            <h3>Investment vs Sell vs Revenue</h3>
+            <h3 className='text-center'>Investment vs Sell vs Revenue(Bar Chart)</h3>
             <ComposedChart width={1000} height={500} data={data}>
                 <XAxis dataKey="month" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
                 <CartesianGrid stroke="#f5f5f5" />
-                <Area type="monotone" dataKey="investment" fill="#8884d8" stroke="#8884d8" />
+                <Area type="monotone" dataKey="investment" fill="#90D4D3" stroke="#7EB74F" />
                 <Bar dataKey="sell" barSize={20} fill="#413ea0" />
-                <Line type="monotone" dataKey="revenue" stroke="red" />
+                <Line type="monotone" dataKey="revenue" stroke="#E98182" />
             </ComposedChart>
-            <h3>Investment vs Sell vs Revenue</h3>
+            <h3 className='text-center'>Investment vs Sell vs Revenue(Composed Chart)</h3>
             <LineChart width={1000} height={500} data={data}>
                 <Line dataKey={'investment'} stroke="green"></Line>
                 <Line dataKey={'sell'} stroke="red"></Line>
@@ -73,8 +72,9 @@ const Dashboard = () => {
                 <XAxis dataKey="month"></XAxis>
                 <Tooltip></Tooltip>
                 <YAxis></YAxis>
+                <Legend />
             </LineChart>
-            <h3>Investment vs Sell vs Revenue</h3>
+            <h3 className='text-center'>Investment vs Sell vs Revenue(Line Chart)</h3>
         </div>
     );
 };
