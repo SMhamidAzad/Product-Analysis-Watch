@@ -54,7 +54,7 @@ const Dashboard = () => {
                 <Bar dataKey="revenue" fill="#90D4D3" />
                 <Bar dataKey="sell" fill="orange" />
             </BarChart>
-            <h3 style={{ color: '#040924'}} className='text-center'>Investment vs Sell vs Revenue(Bar Chart)</h3>
+            <h3 style={{ color: '#040924'}} className='text-center'>Investment vs Sell vs Revenue</h3>
             <ComposedChart width={1100} height={500} data={data}>
                 <XAxis dataKey="month" />
                 <YAxis />
