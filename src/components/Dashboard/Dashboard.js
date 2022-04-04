@@ -8,25 +8,25 @@ const Dashboard = () => {
                 "month": "Mar",
                 "investment": 300000,
                 "sell": 209000,
-                "revenue": 400401
+                "revenue": 900401
             },
             {
                 "month": "Apr",
                 "investment": 500000,
                 "sell": 450000,
-                "revenue": 100500
+                "revenue": 700500
             },
             {
                 "month": "May",
                 "investment": 500000,
                 "sell": 420000,
-                "revenue": 607010
+                "revenue": 457010
             },
             {
                 "month": "Jun",
                 "investment": 500000,
                 "sell": 300000,
-                "revenue": 400405
+                "revenue": 330405
             },
             {
                 "month": "Jul",
@@ -38,11 +38,11 @@ const Dashboard = () => {
                 "month": "Aug",
                 "investment": 700000,
                 "sell": 200000,
-                "revenue": 310000
+                "revenue": 110000
             }
         ]
     return (
-        <div className='container'>
+        <div className='container mt-3'>
             <BarChart width={1000} height={500} data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="month" />
@@ -51,21 +51,21 @@ const Dashboard = () => {
                 <Legend />
                 <Bar dataKey="investment" fill="#7EB74F" />
                 <Bar dataKey="revenue" fill="#90D4D3" />
-                <Bar dataKey="sell" fill="#E98182" />
+                <Bar dataKey="sell" fill="orange" />
             </BarChart>
-            <h3 className='text-center'>Investment vs Sell vs Revenue(Bar Chart)</h3>
-            <ComposedChart width={1000} height={500} data={data}>
+            <h3 style={{ color: '#040924'}} className='text-center'>Investment vs Sell vs Revenue(Bar Chart)</h3>
+            <ComposedChart width={1100} height={500} data={data}>
                 <XAxis dataKey="month" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
                 <CartesianGrid stroke="#f5f5f5" />
                 <Area type="monotone" dataKey="investment" fill="#90D4D3" stroke="#7EB74F" />
-                <Bar dataKey="sell" barSize={20} fill="#413ea0" />
+                <Bar dataKey="sell" barSize={20} fill="orange" />
                 <Line type="monotone" dataKey="revenue" stroke="#E98182" />
             </ComposedChart>
-            <h3 className='text-center'>Investment vs Sell vs Revenue(Composed Chart)</h3>
-            <LineChart width={1000} height={500} data={data}>
+            <h3 style={{ color: '#040924'}} className='text-center'>Investment vs Sell vs Revenue(Composed Chart)</h3>
+            <LineChart width={1000} height={450} data={data}>
                 <Line dataKey={'investment'} stroke="green"></Line>
                 <Line dataKey={'sell'} stroke="red"></Line>
                 <Line dataKey={'revenue'} stroke="blue"></Line>
@@ -74,7 +74,7 @@ const Dashboard = () => {
                 <YAxis></YAxis>
                 <Legend />
             </LineChart>
-            <h3 className='text-center'>Investment vs Sell vs Revenue(Line Chart)</h3>
+            <h3 style={{ color: '#040924'}} className='text-center'>Investment vs Sell vs Revenue(Line Chart)</h3>
         </div>
     );
 };
