@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Classic Watch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project live site link:  [Classic Watch](https://classic-watch-analysis-sm-hamid.netlify.app/).
+
+## Project Description
+* First of all, install react app and create some component.
+* Then, install react router for connect the components.
+* Make a custom hook useReviews.
+* Also, install rechart for dashboard componets.
+* Also added not found component.
+* Also published this project in github.
+* After completing all of this project, deploy this project in netlify.
 
 ## Available Scripts
 
