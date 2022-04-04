@@ -3,7 +3,7 @@ import Riview from '../Rivew/Riview';
 
 const Riviews = () => {
    
-    const [reviews, setReviews] = useReviews();
+    const [reviews] = useReviews();
     return (
         <div className='container'>
             <h2 style={{ color: '#040924'}} className='text-center my-3 fw-bolder'>Custommer Says</h2>

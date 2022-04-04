@@ -4,7 +4,7 @@ import DisplayReview from '../DisplayReview/DisplayReview';
 import './Home.css'
 
 const Home = () => {
-    const [reviews, setReviews] = useReviews()
+    const [reviews] = useReviews()
     return (
         <div className="container">
             <div className='row my-4'>

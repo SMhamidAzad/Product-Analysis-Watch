@@ -42,7 +42,8 @@ const Dashboard = () => {
             }
         ]
     return (
-        <div className='container mt-3'>
+        <div className='d-flex justify-content-center mt-4'>
+             <div className=''>
             <BarChart width={1000} height={500} data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="month" />
@@ -64,17 +65,16 @@ const Dashboard = () => {
                 <Bar dataKey="sell" barSize={20} fill="orange" />
                 <Line type="monotone" dataKey="revenue" stroke="#E98182" />
             </ComposedChart>
-            <h3 style={{ color: '#040924'}} className='text-center'>Investment vs Sell vs Revenue(Composed Chart)</h3>
+            <h3 style={{ color: '#040924'}} className='text-center'>Investment vs Sell vs Revenue</h3>
             <LineChart width={1000} height={450} data={data}>
-                <Line dataKey={'investment'} stroke="green"></Line>
                 <Line dataKey={'sell'} stroke="red"></Line>
-                <Line dataKey={'revenue'} stroke="blue"></Line>
                 <XAxis dataKey="month"></XAxis>
                 <Tooltip></Tooltip>
                 <YAxis></YAxis>
                 <Legend />
             </LineChart>
-            <h3 style={{ color: '#040924'}} className='text-center'>Investment vs Sell vs Revenue(Line Chart)</h3>
+            <h3 style={{ color: '#040924'}} className='text-center'>Month Wise Sell</h3>
+        </div>
         </div>
     );
 };

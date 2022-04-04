@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import CustomLink from '../CustomHook/CustomHook';
 
 const Header = () => {
     return (
@@ -10,11 +11,11 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link className='text-white fw-bold' as={Link} to='/'>HOME</Nav.Link>
-            <Nav.Link className='text-white fw-bold' as={Link} to='/reviews'>REVIEWS</Nav.Link>
-            <Nav.Link className='text-white fw-bold' as={Link} to='/dashboard'>DASHBOARD</Nav.Link>
-            <Nav.Link className='text-white fw-bold' as={Link} to='/blogs'>BLOGS</Nav.Link>
-            <Nav.Link className='text-white fw-bold' as={Link} to='/about'>ABOUT</Nav.Link>
+            <Nav.Link className='fw-bold' as={CustomLink} to='/'>HOME</Nav.Link>
+            <Nav.Link className='fw-bold' as={CustomLink} to='/reviews'>REVIEWS</Nav.Link>
+            <Nav.Link className='fw-bold' as={CustomLink} to='/dashboard'>DASHBOARD</Nav.Link>
+            <Nav.Link className='fw-bold' as={CustomLink} to='/blogs'>BLOGS</Nav.Link>
+            <Nav.Link className='fw-bold' as={CustomLink} to='/about'>ABOUT</Nav.Link>
           </Nav>
           
         </Navbar.Collapse>
